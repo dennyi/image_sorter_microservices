@@ -36,8 +36,8 @@ need to push these packages to a remote repository.
         - cd .\src\
         - python -m unittest discover tests
     3. run a microservice:
-        - set a NATS server url in \src\\{service_name}\src\\.env
-        - cd .\src\\{service_name}\src
+        - set a NATS server url in \src\{service_name}\src\.env
+        - cd .\src\{service_name}\src
         - python .
 
 
