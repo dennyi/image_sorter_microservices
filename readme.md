@@ -16,7 +16,7 @@ Project consists of 3 microservices and a library of shared packages.
         calculates a closest web_color to the average color of that image and moves the image
         to a corresponding folder inside a \storage\sorted folder.
 
-Each microservice contains two separate env files, src\.env is used for local environment,
+Each microservice contains two separate env files, src\\.env is used for local environment,
 when building a docker image, .env gets overwritten by .env_container.
 
 
@@ -35,8 +35,8 @@ need to push these packages to a remote repository.
     python -m unittest discover tests
 
 3. run a microservice:
-    set a NATS server url in \src\{service_name}\src\.env
-    cd .\src\{service_name}\src
+    set a NATS server url in \src\\{service_name}\src\\.env
+    cd .\src\\{service_name}\src
     python .
 
 
