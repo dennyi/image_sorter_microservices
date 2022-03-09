@@ -33,7 +33,7 @@ need to push these packages to a remote repository.
     docker-compose up
 
 
-## Run in local environment
+## Run in local development environment
     1. Install all dependencies:
         - pip install -r requirements_dev.txt
     2. Run tests:
