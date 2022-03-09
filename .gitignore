@@ -2,6 +2,3 @@ __pycache__
 *.pyc
 .idea
 *.egg-info
-storage/new/*
-storage/queue/*
-storage/sorted/*
