@@ -25,6 +25,9 @@ Folder libs contains multiple packages, which are installed localy
 using pip when building a service docker image. This prevents code duplication without the
 need to push these packages to a remote repository.
 
+# Prequisities
+    1. docker installed and running
+    2. docker-compose installed
 # Installation
 ## Local environment
 1. Install all dependencies:
