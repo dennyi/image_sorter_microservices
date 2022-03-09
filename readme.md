@@ -29,7 +29,11 @@ need to push these packages to a remote repository.
     1. docker installed and running
     2. docker-compose installed
 # Installation
-## Local environment
+## Build and launch containers
+    docker-compose up
+
+
+## Run in local environment
     1. Install all dependencies:
         - pip install -r requirements_dev.txt
     2. Run tests:
@@ -40,7 +44,4 @@ need to push these packages to a remote repository.
         - cd .\src\{service_name}\src
         - python .
 
-
-## Build and launch containers
-docker-compose up
 
