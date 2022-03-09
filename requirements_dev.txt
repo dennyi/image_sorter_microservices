@@ -1,0 +1,7 @@
+-e ./src/libs/filemanager
+-e ./src/libs/lifecyclemanager
+-e ./src/libs/messagebroker
+nats-py
+python-dotenv
+numpy
+pillow

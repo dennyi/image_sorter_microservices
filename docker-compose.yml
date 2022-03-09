@@ -1,0 +1,64 @@
+version: "3.9"
+services:
+  nats:
+    image: nats
+    ports:
+      - "8222:8222"
+      - "6222:6222"
+      - "4222:4222"
+    networks: ["nats"]
+
+  image_loader:
+    build:
+      context: ./src
+      dockerfile: ./image_loader/Dockerfile
+    working_dir: /app
+    restart: always
+    depends_on:
+      - "image_processor"
+    volumes:
+      - type: volume
+        source: image_queue
+        target: /app/storage/queue
+      - type: bind
+        source: ./storage/new
+        target: /app/storage/new
+    networks: ["nats"]
+
+  image_processor:
+    build:
+      context: ./src
+      dockerfile: ./image_processor/Dockerfile
+    working_dir: /app
+    restart: always
+    depends_on:
+      - "image_sorter"
+    volumes:
+      - type: volume
+        source: image_queue
+        target: /app/storage/queue
+    networks: ["nats"]
+
+  image_sorter:
+    build:
+      context: ./src
+      dockerfile: ./image_sorter/Dockerfile
+    working_dir: /app
+    restart: always
+    depends_on:
+      - "nats"
+    volumes:
+      - type: volume
+        source: image_queue
+        target: /app/storage/queue
+      - type: bind
+        source: ./storage/sorted
+        target: /app/storage/sorted
+    networks: ["nats"]
+
+networks:
+  nats:
+    name: nats
+
+volumes:
+  image_queue: {}

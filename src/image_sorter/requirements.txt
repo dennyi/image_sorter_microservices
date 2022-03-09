@@ -1,0 +1,7 @@
+./libs/filemanager
+./libs/lifecyclemanager
+./libs/messagebroker
+nats-py
+python-dotenv
+numpy
+pillow
