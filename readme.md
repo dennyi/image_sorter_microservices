@@ -30,17 +30,15 @@ need to push these packages to a remote repository.
     2. docker-compose installed
 # Installation
 ## Local environment
-1. Install all dependencies:
-    pip install -r requirements_dev.txt
-
-2. Run tests:
-    cd .\src\
-    python -m unittest discover tests
-
-3. run a microservice:
-    set a NATS server url in \src\\{service_name}\src\\.env
-    cd .\src\\{service_name}\src
-    python .
+    1. Install all dependencies:
+        - pip install -r requirements_dev.txt
+    2. Run tests:
+        - cd .\src\
+        - python -m unittest discover tests
+    3. run a microservice:
+        - set a NATS server url in \src\\{service_name}\src\\.env
+        - cd .\src\\{service_name}\src
+        - python .
 
 
 ## Build and launch containers
